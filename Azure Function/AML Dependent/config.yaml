@@ -1,0 +1,8 @@
+DeploymentConfig:
+    subscription_id : "subscription_id"
+    resource_group : "resource_group"
+    modelname : "diabetes"
+    environmentname : "AzureFuncDeployEnvironment"
+    entryScriptname : "score.py"
+    amlworkspace : "testAML_service"
+    source_directory : "./"

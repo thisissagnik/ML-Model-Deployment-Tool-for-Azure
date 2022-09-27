@@ -1,0 +1,10 @@
+DeploymentConfig:
+    subscription_id : "subscription_id"
+    resource_group : "resource_group"
+    deploymentendpointname : "deploymentendpointname"
+    modelname : "modelname"
+    environmentname : "aksDeployEnvironment"
+    entryScriptname : "score.py"
+    akscluster : "akscluster"
+    amlworkspace : "amlworkspace"
+    source_directory : "./"

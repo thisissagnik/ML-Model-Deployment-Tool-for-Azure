@@ -1,0 +1,13 @@
+# Start from python slim-buster docker image
+FROM python:3.8.6-slim-buster
+# Update base packagesRUN apt-get update
+RUN apt-get upgrade -y
+
+# Copy files to working directory
+COPY ./src/ /app/src/
+WORKDIR /app
+# Install python packages using requirements.txt
+RUN pip install -r src/requirement.txt
+
+# Run the script
+CMD python src/main.py

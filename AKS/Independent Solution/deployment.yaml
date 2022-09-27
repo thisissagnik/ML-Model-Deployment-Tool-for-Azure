@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: <<deployment-name>>
+  labels:
+      name: <<deployment-name>>
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+     name: <<deployment-name>>
+  template:
+    metadata:
+      labels:
+         name: <<deployment-name>>
+    spec:
+      containers:
+        - name: model-pod
+          image: <<acr-name>>.azurecr.io/<<acr-repo-name>>:<<image-tag>>
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 6000
